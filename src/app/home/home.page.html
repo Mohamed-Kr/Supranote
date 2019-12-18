@@ -17,9 +17,11 @@
       </ion-segment-button>
       <ion-segment-button value="1" (click)="segmentChanged(1)" [checked]="c==1">
         <ion-icon name="school"></ion-icon>
+        <ion-badge color="danger" style="position:absolute; transform: translate(15px,-7px)">99</ion-badge>
       </ion-segment-button>
       <ion-segment-button value="2" (click)="segmentChanged(2)" [checked]="c==2">
         <ion-icon name="star"></ion-icon>
+        <ion-badge color="danger" style="position:absolute; transform: translate(15px,-7px)">2</ion-badge>
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
@@ -28,16 +30,117 @@
 
 <ion-content color="dark">
   <ion-slides fullscreen #slides (ionSlideDidChange)="slideChanged()">
-    <ion-slide>
-      <h1>Slide 1</h1>
+    <ion-slide style="margin:0px; padding:0px;">
+
+      <ion-list style="width: 100%; margin:0px; padding:0.6em;">
+      <ion-card>
+        <ion-card-content>
+          <ion-fab vertical="center" horizontal="start" slot="fixed">
+            <ion-fab-button color="dark" size="small">
+              <ion-icon name="skip-backward"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+
+          <div style=" height:1em; margin: auto; width:10em; transform:translate(0px, -20px)">
+            <ion-datetime displayFormat="DDD/MM/YYYY" min="1994-03-14" max="2012-12-09" value="2002-09-23T15:03:46.789"></ion-datetime>
+          </div>
+
+          <ion-fab vertical="center" horizontal="end" slot="fixed">
+            <ion-fab-button color="dark" size="small">
+              <ion-icon name="skip-forward"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+        </ion-card-content>
+      </ion-card>
+          <ion-card style="width: 100%; height: 8em; margin: 0em; padding:0px; padding-left: 1em; margin-top: 0.5em;" color="danger">
+            <ion-card style="width: 100%; height: 100%; margin: 0px; border-radius: 0%;" color="dark" button (click)="presentAlertHomeworks()">
+                <h4 style="text-align: left; margin:5px; margin-top: 1.5em;">Mathématiques</h4>
+                <p style="text-align: left; margin:5px">M. Lanuzel</p>
+                <p style="left:3px; top:3px ; position: absolute; margin:0px;">10:00</p>
+                <p style="left:3px; bottom:3px ; position: absolute; margin:0px;">10:00</p>
+                <p style="right:3px; top:3px ; position: absolute; margin:0px;">Salle 42</p>
+                <p style="right:6px; bottom:6px ; position: absolute; margin:0px; font-size: 20px; color: #f04141;"><b>Absent(e)</b></p>
+            </ion-card>
+          </ion-card> 
+          <ion-card style="width: 100%; height: 8em; margin: 0em; padding:0px; padding-left: 1em; margin-top: 0.5em;" color="danger">
+            <ion-card style="width: 100%; height: 100%; margin: 0px; border-radius: 0%;" color="dark" button (click)="presentAlertHomeworks()">
+                <h4 style="text-align: left; margin:5px; margin-top: 1.5em;">Mathématiques</h4>
+                <p style="text-align: left; margin:5px">M. Lanuzel</p>
+                <p style="left:3px; top:3px ; position: absolute; margin:0px;">10:00</p>
+                <p style="left:3px; bottom:3px ; position: absolute; margin:0px;">10:00</p>
+                <p style="right:3px; top:3px ; position: absolute; margin:0px;">Salle 42</p>
+                <p style="right:6px; bottom:6px ; position: absolute; margin:0px; font-size: 20px; color: #41aaf0;"><b>Exeptionel</b></p>
+            </ion-card>
+          </ion-card>
+          <ion-card color="success">
+            <ion-card-header>
+              <ion-card-title>12:00 - Déjeuner - 14:30</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+          
+          <ion-card style="width: 100%; height: 8em; margin: 0em; padding:0px; padding-left: 1em; margin-top: 0.5em;" color="danger">
+            <ion-card style="width: 100%; height: 100%; margin: 0px; border-radius: 0%;" color="dark" button (click)="presentAlertHomeworks()">
+                <h4 style="text-align: left; margin:5px; margin-top: 1.5em;">Mathématiques</h4>
+                <p style="text-align: left; margin:5px">M. Lanuzel</p>
+                <p style="left:3px; top:3px ; position: absolute; margin:0px;">10:00</p>
+                <p style="left:3px; bottom:3px ; position: absolute; margin:0px;">10:00</p>
+                <p style="right:3px; top:3px ; position: absolute; margin:0px;">Salle 42</p>
+                <p style="right:6px; bottom:6px ; position: absolute; margin:0px; font-size: 20px; color: #f04141;"><b>Absent(e)</b></p>
+            </ion-card>
+          </ion-card> 
+          
+          <ion-card style="width: 100%; height: 8em; margin: 0em; padding:0px; padding-left: 1em; margin-top: 0.5em;" color="danger">
+            <ion-card style="width: 100%; height: 100%; margin: 0px; border-radius: 0%;" color="dark" button (click)="presentAlertHomeworks()">
+                <h4 style="text-align: left; margin:5px; margin-top: 1.5em;">Mathématiques</h4>
+                <p style="text-align: left; margin:5px">M. Lanuzel</p>
+                <p style="left:3px; top:3px ; position: absolute; margin:0px;">10:00</p>
+                <p style="left:3px; bottom:3px ; position: absolute; margin:0px;">10:00</p>
+                <p style="right:3px; top:3px ; position: absolute; margin:0px;">Salle 42</p>
+                <p style="right:6px; bottom:6px ; position: absolute; margin:0px; font-size: 20px; color: #f04141;"><b>Absent(e)</b></p>
+            </ion-card>
+          </ion-card> 
+          
+          <ion-card style="width: 100%; height: 8em; margin: 0em; padding:0px; padding-left: 1em; margin-top: 0.5em;" color="danger">
+            <ion-card style="width: 100%; height: 100%; margin: 0px; border-radius: 0%;" color="dark" button (click)="presentAlertHomeworks()">
+                <h4 style="text-align: left; margin:5px; margin-top: 1.5em;">Mathématiques</h4>
+                <p style="text-align: left; margin:5px">M. Lanuzel</p>
+                <p style="left:3px; top:3px ; position: absolute; margin:0px;">10:00</p>
+                <p style="left:3px; bottom:3px ; position: absolute; margin:0px;">10:00</p>
+                <p style="right:3px; top:3px ; position: absolute; margin:0px;">Salle 42</p>
+                <p style="right:6px; bottom:6px ; position: absolute; margin:0px; font-size: 20px; color: #f04141;"><b>Absent(e)</b></p>
+            </ion-card>
+          </ion-card> 
+          
+          <ion-card style="width: 100%; height: 8em; margin: 0em; padding:0px; padding-left: 1em; margin-top: 0.5em;" color="danger">
+            <ion-card style="width: 100%; height: 100%; margin: 0px; border-radius: 0%;" color="dark" button (click)="presentAlertHomeworks()">
+                <h4 style="text-align: left; margin:5px; margin-top: 1.5em;">Mathématiques</h4>
+                <p style="text-align: left; margin:5px">M. Lanuzel</p>
+                <p style="left:3px; top:3px ; position: absolute; margin:0px;">10:00</p>
+                <p style="left:3px; bottom:3px ; position: absolute; margin:0px;">10:00</p>
+                <p style="right:3px; top:3px ; position: absolute; margin:0px;">Salle 42</p>
+                <p style="right:6px; bottom:6px ; position: absolute; margin:0px; font-size: 20px; color: #f04141;"><b>Absent(e)</b></p>
+            </ion-card>
+          </ion-card> 
+      </ion-list>
+      
     </ion-slide>
     <ion-slide>
-      <h1>Slide 2</h1>
+      <ion-card style="width: 100%; height: 8em;" color="dark">
+          <div style="height: 100%; position: absolute;top:10px; left:0px">
+            <ion-card-header style="padding:0px;">
+              <ion-card-title>Mathématiques</ion-card-title>
+              <ion-label style="text-align:left;">M. Lanuzel</ion-label>
+            </ion-card-header >
+          </div>
+          <div style="height: 8em; width:1em; top:0px; left:0px; background-color: #f04141; padding:0px">
+            <p style="text-align: center; position: absolute; left:1em; top:0px; margin:5px;">10:00</p>
+            <p style="text-align: center; position: absolute; left:1em; bottom:0px; margin:5px;">10:00</p>
+          </div>
+      </ion-card>
     </ion-slide>
     <ion-slide>
       <h1>Slide 3</h1>
     </ion-slide>
   </ion-slides>
-
 </ion-content>
 

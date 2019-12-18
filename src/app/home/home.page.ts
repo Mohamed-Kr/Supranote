@@ -127,7 +127,45 @@ export class HomePage {
 
     await alert.present();
   }
+  
+  async presentAlertHomeworks() {
+    const alert = await this.alertController.create({
+      header: 'Devoirs',
+      inputs: [
+        {
+          name: 'd1',
+          type: 'checkbox',
+          label: 'Fait',
+          value: 'value1',
+          checked: true,
+        },
 
+        {
+          name: 'checkbox2',
+          type: 'checkbox',
+          label: 'Checkbox 2',
+          value: 'value2',
+        },
 
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel');
+          }
+        }, {
+          text: 'Ok',
+          handler: () => {
+            console.log('Confirm Ok');
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
 
 }
