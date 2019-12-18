@@ -6,6 +6,12 @@ import { Slides } from 'ionic-angular';
 import { ModalController } from '@ionic/angular';
 import { ModalPage } from './modal/modal.page';
 
+import { ActionSheetController } from '@ionic/angular';
+
+import { AlertController } from '@ionic/angular';
+
+import  axios  from 'axios';
+
 
 @Component({
   selector: 'app-home',
@@ -17,6 +23,7 @@ import { ModalPage } from './modal/modal.page';
 export class HomePage {
   c = 0
 
+  constructor(public actionSheetController: ActionSheetController, public alertController: AlertController) { }
 
   @ViewChild('slides', {static:true}) slides: Slides;
   
@@ -30,6 +37,7 @@ export class HomePage {
   slideChanged() {
     this.slides.getActiveIndex().then(data => {
       console.log(data)
+      this.c=data
     })
   }
 
@@ -39,20 +47,87 @@ export class HomePage {
     document.getElementsByTagName("ion-segment-button")[i].setAttribute("checked", "true")
   }
   
-  constructor(public modalController: ModalController) {
-    console.log("llllalal")
-   }
   
   segmentChanged(i: any) {
     this.slides.slideTo(i, 500)
     this.c = i
   }
-  
-  async presentModal() {
-    const modal = await this.modalController.create({
-      component: ModalPage
+
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Paramètres',
+      buttons: [{
+        text: 'Delete',
+        icon: 'trash',
+        handler: () => {
+          console.log('Delete clicked');
+        }
+      }, {
+        text: 'Partager',
+        icon: 'share',
+        handler: () => {
+          console.log('Share clicked');
+        }
+      }, {
+        text: 'Personaliser',
+        icon: 'arrow-dropright-circle',
+        handler: () => {
+          console.log('Play clicked');
+        }
+      }, {
+        text: 'Se déconnecter',
+        icon: 'close',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      }]
     });
-    return await modal.present();
+    await actionSheet.present();
   }
+
+
+  async presentAlertPrompt() {
+    const alert = await this.alertController.create({
+      header: 'Compte',
+      inputs: [
+        {
+          name: 'id',
+          type: 'text',
+          placeholder: 'Identifiant habituel'
+        },
+        {
+          name: 'pass',
+          type: 'password',
+          placeholder: 'Mot de passe habituel'
+        },
+        {
+          name:'ac',
+          type: 'text',
+          placeholder: 'Académie en minuscule'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Confirmer',
+          role: 'cancel',
+          cssClass: 'success',
+          handler: () => {
+            console.log('Confirm Cancel');
+          }
+        }, {
+          text: 'Annuler',
+          cssClass: 'danger',
+          handler: () => {
+            console.log('Confirm Ok');
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+
 
 }
