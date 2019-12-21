@@ -25,6 +25,11 @@ export class AppComponent {
       title: 'Notes',
       url: '/notes',
       icon: 'school'
+    },
+    {
+      title: 'Devoirs',
+      url: '/devoirs',
+      icon: 'book'
     }
   ];
 
@@ -38,7 +43,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.backgroundColorByHexString("#ffffff")
+      this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
   }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Injectable } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -8,6 +8,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+
+import { PopoverPage } from './home/popover/popover.page';
 
 @NgModule({
   declarations: [
@@ -21,9 +23,10 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   providers: [
     StatusBar,
+    PopoverPage,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
-})
+}) 
 export class AppModule {}

@@ -15,7 +15,6 @@ import axios from 'axios';
 })
 
 export class AgendaPage {
-  c = 0
 
   constructor(public actionSheetController: ActionSheetController, public alertController: AlertController, public toastController: ToastController) { }
 

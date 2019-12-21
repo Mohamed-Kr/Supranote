@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'notes',
     loadChildren: () => import('./notes/notes.module').then(m => m.NotesPageModule)
+  },
+  {
+    path: 'devoirs',
+    loadChildren: () => import('./devoirs/devoirs.module').then(m => m.DevoirsPageModule)
   }
 ];
 

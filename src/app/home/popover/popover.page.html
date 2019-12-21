@@ -41,7 +41,7 @@
   <ion-card>
     <ion-header>
       <ion-toolbar color="dark" fill="solid">
-        <ion-icon name="school" size="large" slot="start" style="padding-left: 10px;" button href="/notes"></ion-icon>
+        <ion-icon name="school" size="large" slot="start" style="padding-left: 10px;"></ion-icon>
         <ion-title>Dernières notes</ion-title>
         <ion-button slot="end" fill="clear" color="light" shape="round">
           <ion-icon name="add-circle" size="large"></ion-icon>
@@ -54,28 +54,40 @@
       <ion-list style="padding:0px;">
         <ion-card color="primary" style="padding:0px; margin:5px;">
           <ion-card-header style="padding:0px 5px 0px 5px">
-            <ion-toolbar  color="secondary" style="padding:0px; padding-left:1em; margin-left:0.4em" color="light">
-                <ion-card-title>Mathématiques</ion-card-title>
+            <ion-toolbar  color="primary" style="padding:0px">
+              <ion-card style="padding:8px;margin:0px; height:100%;width:70%;position:absolute; top:0px;left:0x;" color="light">
+                <ion-card-title>Mathémathiques</ion-card-title>
                 <ion-card-subtitle>Le 10/13/19</ion-card-subtitle>
-            <ion-text style=" padding-right: 1em;" slot="end"><p style="font-size: 2em; display: inline;">14.5</p>/20</ion-text>
+                <ion-icon color="dark" name="information-circle" style="position:absolute; top:3px;right:3px;"></ion-icon>
+                <p style="position: absolute; bottom:1px; margin:0px; padding:0px; right:3px">coeff. 5</p>
+              </ion-card>
+            <ion-text slot="end"><p style="font-size: 2em; display: inline;">14.5</p>/20</ion-text>
             </ion-toolbar>
           </ion-card-header>
         </ion-card>
         <ion-card color="secondary" style="padding:0px; margin:5px;">
           <ion-card-header style="padding:0px 5px 0px 5px">
-            <ion-toolbar  color="secondary" style="padding:0px; padding-left:1em; margin-left:0.4em" color="light">
+            <ion-toolbar  color="secondary" style="padding:0px">
+              <ion-card style="padding:8px;margin:0px; height:100%;width:70%;position:absolute; top:0px;left:0x;" color="light">
                 <ion-card-title>Histoire</ion-card-title>
                 <ion-card-subtitle>Le 10/13/19</ion-card-subtitle>
-            <ion-text style=" padding-right: 1em;" slot="end"><p style="font-size: 2em; display: inline;">-5i</p>/10</ion-text>
+                <ion-icon color="dark" name="information-circle" style="position:absolute; top:3px;right:3px;"></ion-icon>
+                <p style="position: absolute; bottom:1px; margin:0px; padding:0px; right:3px">coeff. 5</p>
+              </ion-card>
+            <ion-text slot="end"><p style="font-size: 2em; display: inline;">-5i</p>/10</ion-text>
             </ion-toolbar>
           </ion-card-header>
         </ion-card>
-        <ion-card color="tertiary" style="padding:0px; margin:5px;">
+        <ion-card color="danger" style="padding:0px; margin:5px;">
           <ion-card-header style="padding:0px 5px 0px 5px">
-            <ion-toolbar  color="secondary" style="padding:0px; padding-left:1em; margin-left:0.4em" color="light">
+            <ion-toolbar  color="danger" style="padding:0px">
+              <ion-card style="padding:8px;margin:0px; height:100%;width:70%;position:absolute; top:0px;left:0x;" color="light">
                 <ion-card-title>Anglais</ion-card-title>
                 <ion-card-subtitle>Le 10/13/19</ion-card-subtitle>
-            <ion-text style=" padding-right: 1em;" slot="end"><p style="font-size: 2em; display: inline;">17</p>/20</ion-text>
+                <ion-icon color="dark" name="information-circle" style="position:absolute; top:3px;right:3px;"></ion-icon>
+                <p style="position: absolute; bottom:1px; margin:0px; padding:0px; right:3px">coeff. 5</p>
+              </ion-card>
+            <ion-text slot="end"><p style="font-size: 2em; display: inline;">16</p>/20</ion-text>
             </ion-toolbar>
           </ion-card-header>
         </ion-card>
@@ -102,7 +114,7 @@
       <div class="bo1"><div class="bo2"></div></div>
       <div class="bo1"><div class="bo3"></div></div>
       <!-- <p  style="position: absolute;top: 0px;margin: 0px;font-size: 1.4em;z-index: 30;color: white;text-align: center;width: 3em; margin-left:8.5em; transform: translate(-0.7em, -0.6em); background-color: black; border-radius: 5px;">10:00</p> -->
-      <ion-card class="cardI" color="light" button (click)="presentAlertHomeworks()">
+      <ion-card class="cardI" color="light">
         <h4 class="matter">Physique-Chimie</h4>
         <p class="teacher">Mme. Chabrier</p>
         <p class="room">Salle 16</p>
@@ -114,7 +126,7 @@
       <div class="bo1"><div class="bo2"></div></div>
       <div class="bo1"><div class="bo3"></div></div>
       <!-- <p  style="position: absolute;top: 0px;margin: 0px;font-size: 1.4em;z-index: 30;color: white;text-align: center;width: 3em; margin-left:8.5em; transform: translate(-0.7em, -0.6em); background-color: black; border-radius: 5px;">10:00</p> -->
-      <ion-card class="cardI" color="light" button (click)="presentAlertHomeworks()">
+      <ion-card class="cardI" color="light">
         <h4 class="matter2">Mathématiques</h4>
         <p class="teacher">M. Lanuzel</p>
         <p class="room">Salle 144</p>
