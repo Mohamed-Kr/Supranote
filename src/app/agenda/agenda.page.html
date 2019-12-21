@@ -1,0 +1,108 @@
+<ion-header>
+  <h2 class="pageTitle">Agenda</h2>
+  <ion-toolbar>
+    <ion-menu-button slot="start">
+      <ion-menu-button size="large" color="dark"></ion-menu-button>
+    </ion-menu-button>
+    <ion-button slot="end" fill="clear" shape="round" color="dark">
+      <ion-icon slot="icon-only" name="refresh"></ion-icon>
+    </ion-button>
+
+
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-button slot="start" color="dark">
+      <ion-icon name="skip-backward"></ion-icon>
+    </ion-button>
+
+    <ion-datetime displayFormat="DDD/MM/YYYY" min="1994-03-14" max="2012-12-09" value="2002-09-23T15:03:46.789" class="dater">
+    </ion-datetime>
+
+    <ion-button slot="end" color="dark">
+      <ion-icon name="skip-forward"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list class="agenda-list">
+    <ion-card class="cardC" color="warning">
+      <div class="he1"><div class="he2"></div></div>
+      <div class="he1"><div class="he3"></div></div>
+      <div class="bo1"><div class="bo2"></div></div>
+      <div class="bo1"><div class="bo3"></div></div>
+      <!-- <p  style="position: absolute;top: 0px;margin: 0px;font-size: 1.4em;z-index: 30;color: white;text-align: center;width: 3em; margin-left:8.5em; transform: translate(-0.7em, -0.6em); background-color: black; border-radius: 5px;">10:00</p> -->
+      <ion-card class="cardI" color="light" button (click)="presentAlertHomeworks()">
+        <h4 class="matter">Physique-Chimie</h4>
+        <p class="teacher">Mme. Chabrier</p>
+        <p class="room">Salle 16</p>
+      </ion-card>
+    </ion-card>
+    <ion-card class="cardC2" color="primary">
+      <div class="he1"><div class="he2"></div></div>
+      <div class="he1"><div class="he3"></div></div>
+      <div class="bo1"><div class="bo2"></div></div>
+      <div class="bo1"><div class="bo3"></div></div>
+      <!-- <p  style="position: absolute;top: 0px;margin: 0px;font-size: 1.4em;z-index: 30;color: white;text-align: center;width: 3em; margin-left:8.5em; transform: translate(-0.7em, -0.6em); background-color: black; border-radius: 5px;">10:00</p> -->
+      <ion-card class="cardI" color="light" button (click)="presentAlertHomeworks()">
+        <h4 class="matter2">Mathématiques</h4>
+        <p class="teacher">M. Lanuzel</p>
+        <p class="room">Salle 144</p>
+      </ion-card>
+    </ion-card>
+    <ion-card color="success" button (click)="presentToastWithOptions()">
+      <ion-card-header>
+      <ion-card-title class="ion-text-center">Repas</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    <ion-card class="cardC" color="dark">
+      <div class="he1"><div class="he2"></div></div>
+      <div class="he1"><div class="he3"></div></div>
+      <div class="bo1"><div class="bo2"></div></div>
+      <div class="bo1"><div class="bo3"></div></div>
+      <!-- <p  style="position: absolute;top: 0px;margin: 0px;font-size: 1.4em;z-index: 30;color: white;text-align: center;width: 3em; margin-left:8.5em; transform: translate(-0.7em, -0.6em); background-color: black; border-radius: 5px;">10:00</p> -->
+      <ion-card class="cardI" color="light" button (click)="presentAlertHomeworks()">
+        <h4 class="matter">SVT</h4>
+        <p class="teacher">Mme. Lucarini</p>
+        <p class="room">Salle 42</p>
+      </ion-card>
+    </ion-card>
+    <ion-card class="cardC" color="tertiary">
+      <div class="he1"><div class="he2"></div></div>
+      <div class="he1"><div class="he3"></div></div>
+      <div class="bo1"><div class="bo2"></div></div>
+      <div class="bo1"><div class="bo3"></div></div>
+      <!-- <p  style="position: absolute;top: 0px;margin: 0px;font-size: 1.4em;z-index: 30;color: white;text-align: center;width: 3em; margin-left:8.5em; transform: translate(-0.7em, -0.6em); background-color: black; border-radius: 5px;">10:00</p> -->
+      <ion-card class="cardI" color="light" button (click)="presentAlertHomeworks()">
+        <h4 class="matter">Philolsophie</h4>
+        <p class="teacher">M. Bitjoka</p>
+        <p class="room">Salle 666</p>
+      </ion-card>
+    </ion-card>
+    <ion-card class="cardC" color="secondary">
+      <div class="he1"><div class="he2"></div></div>
+      <div class="he1"><div class="he3"></div></div>
+      <div class="bo1"><div class="bo2"></div></div>
+      <div class="bo1"><div class="bo3"></div></div>
+      <!-- <p  style="position: absolute;top: 0px;margin: 0px;font-size: 1.4em;z-index: 30;color: white;text-align: center;width: 3em; margin-left:8.5em; transform: translate(-0.7em, -0.6em); background-color: black; border-radius: 5px;">10:00</p> -->
+      <ion-card class="cardI" color="light" button (click)="presentAlertHomeworks()">
+        <h4 class="matter">Allemand</h4>
+        <p class="teacher">Mme. Valognes</p>
+        <p class="room">Salle 152</p>
+      </ion-card>
+    </ion-card>
+    <ion-card class="cardC" color="danger">
+      <div class="he1"><div class="he2"></div></div>
+      <div class="he1"><div class="he3"></div></div>
+      <div class="bo1"><div class="bo2"></div></div>
+      <div class="bo1"><div class="bo3"></div></div>
+      <!-- <p  style="position: absolute;top: 0px;margin: 0px;font-size: 1.4em;z-index: 30;color: white;text-align: center;width: 3em; margin-left:8.5em; transform: translate(-0.7em, -0.6em); background-color: black; border-radius: 5px;">10:00</p> -->
+      <ion-card class="cardI" color="light" button (click)="presentAlertHomeworks()">
+        <h4 class="matter">Anglais</h4>
+        <p class="teacher">Mme. Delhpital</p>
+        <p class="room">Salle 123</p>
+      </ion-card>
+    </ion-card>
+  </ion-list>
+</ion-content>

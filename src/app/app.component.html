@@ -2,8 +2,10 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
+        <ion-toolbar color="dark" style="padding-top: 2em; padding-bottom: 2em;">
+          <ion-title>Nom</ion-title>
+          <ion-title>Prénom</ion-title>
+          <ion-title>TS2</ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-content>
@@ -17,6 +19,34 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+
+        <ion-fab vertical="bottom" horizontal="start">
+          <ion-fab-button color="dark">
+            <ion-icon name="options"></ion-icon>
+          </ion-fab-button>
+        
+          <ion-fab-list side="top" size="large">
+          <ion-fab-button size="large" color="dark">
+            <ion-icon name="settings" size="large"></ion-icon>
+          </ion-fab-button>
+          </ion-fab-list>
+        
+          <ion-fab-list side="end">
+          <ion-fab-button color="primary">
+            <ion-icon name=""></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button color="secondary">
+            <ion-icon name=""></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button color="danger">
+            <ion-icon name=""></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button color="dark">
+            <ion-icon name="checkmark"></ion-icon>
+          </ion-fab-button>
+          </ion-fab-list>
+        
+        </ion-fab>
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
