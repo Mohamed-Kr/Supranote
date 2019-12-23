@@ -23,15 +23,13 @@ export class HomePage {
   async presentNotesInfos() {
     const alert = await this.alertController.create({
       header: 'DM4',
-      message: 'note + : 19.5 \n moy : 3.5 \n note- : ta note lol',
+      message: "<br/>note+: 19.5<br/>moy: 3.5<br/>note-: ta note lol",
       buttons: [
         {
           text: 'Ok',
-          handler: () => {
-            console.log('Buy clicked');
-          }
         }
-      ]
+      ],
+      subHeader: 'coeff: 7, tist',
     });
     await alert.present();
   }

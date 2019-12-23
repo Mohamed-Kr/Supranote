@@ -1,17 +1,17 @@
 <ion-header>
-    <h2 class="pageTitle">Accueil</h2>
   <ion-toolbar>
-    <ion-menu-button slot="start">
-      <ion-menu-button size="large" color="dark"></ion-menu-button>
-    </ion-menu-button>
-    <ion-button slot="end" fill="clear" shape="round" color="dark">
+    <ion-menu-button size="large" color="dark" slot="start" no-padding no-margin></ion-menu-button>
+    <ion-title color="dark" text-center>
+      <h3>Accueil</h3>
+    </ion-title>
+    <ion-button fill="clear" shape="round" color="dark" slot="end" margin no-padding no-margin>
       <ion-icon slot="icon-only" name="refresh"></ion-icon>
     </ion-button>
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content>
+<ion-content color="medium">
   <ion-list>
   <ion-card button>
     <ion-header>
@@ -19,7 +19,7 @@
         <ion-icon name="book" size="large" slot="start" style="padding-left: 10px;"></ion-icon>
         <ion-title>Prochains devoirs</ion-title>
         <ion-card-subtitle style="padding-left: 1.5em;">(demain)</ion-card-subtitle>
-        <ion-button slot="end" fill="clear" color="light" shape="round">
+        <ion-button slot="end" fill="clear" color="light" shape="round" routerLink="/devoirs">
           <ion-icon name="add-circle" size="large"></ion-icon>
         </ion-button>
       </ion-toolbar>
@@ -43,7 +43,7 @@
       <ion-toolbar color="dark" fill="solid">
         <ion-icon name="school" size="large" slot="start" style="padding-left: 10px;" button href="/notes"></ion-icon>
         <ion-title>Dernières notes</ion-title>
-        <ion-button slot="end" fill="clear" color="light" shape="round">
+        <ion-button slot="end" fill="clear" color="light" shape="round" routerLink="/notes">
           <ion-icon name="add-circle" size="large"></ion-icon>
         </ion-button>
       </ion-toolbar>
@@ -89,7 +89,7 @@
       <ion-toolbar color="dark" fill="solid">
         <ion-icon name="calendar" size="large" slot="start" style="padding-left: 10px;"></ion-icon>
         <ion-title>Prochains cours</ion-title>
-        <ion-button slot="end" fill="clear" color="light" shape="round">
+        <ion-button slot="end" fill="clear" color="light" shape="round" routerLink="/agenda">
           <ion-icon name="add-circle" size="large"></ion-icon>
         </ion-button>
       </ion-toolbar>

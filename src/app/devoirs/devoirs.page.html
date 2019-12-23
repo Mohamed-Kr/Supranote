@@ -1,10 +1,10 @@
 <ion-header>
-  <h2 class="pageTitle">Devoirs</h2>
   <ion-toolbar>
-    <ion-menu-button slot="start">
-      <ion-menu-button size="large" color="dark"></ion-menu-button>
-    </ion-menu-button>
-    <ion-button slot="end" fill="clear" shape="round" color="dark">
+    <ion-menu-button size="large" color="dark" slot="start" no-padding no-margin></ion-menu-button>
+    <ion-title color="dark" text-center>
+      <h3>Devoirs</h3>
+    </ion-title>
+    <ion-button fill="clear" shape="round" color="dark" slot="end" margin no-padding no-margin>
       <ion-icon slot="icon-only" name="refresh"></ion-icon>
     </ion-button>
   </ion-toolbar>
@@ -12,4 +12,21 @@
 
 
 <ion-content>
+  <ion-card>
+    <ion-card-header no-margin  color="dark">
+        <ion-title text-center>Lundi 25 Décembre</ion-title>
+    </ion-card-header>
+    <ion-card-content no-padding no-margin>
+      <ion-list no-padding no-margin>
+        <ion-card>
+          <ion-card-header no-padding no-margin>
+            <ion-toolbar padding-end padding-start no-margin color="danger">
+              <ion-card-title no-padding no-margin>Mathématiques</ion-card-title >
+              <ion-checkbox no-padding no-margin slot="end"></ion-checkbox>
+            </ion-toolbar >
+          </ion-card-header>
+        </ion-card>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

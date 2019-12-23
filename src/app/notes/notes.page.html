@@ -1,24 +1,22 @@
 <ion-header>
-  <h2 class="pageTitle">Notes</h2>
   <ion-toolbar>
-    <ion-menu-button slot="start">
-      <ion-menu-button size="large" color="dark"></ion-menu-button>
-    </ion-menu-button>
-    <ion-button slot="end" fill="clear" shape="round" color="dark">
+    <ion-menu-button size="large" color="dark" slot="start" no-padding no-margin></ion-menu-button>
+    <ion-title color="dark" text-center>
+      <h3>Notes</h3>
+    </ion-title>
+    <ion-button fill="clear" shape="round" color="dark" slot="end" margin no-padding no-margin>
       <ion-icon slot="icon-only" name="refresh"></ion-icon>
     </ion-button>
   </ion-toolbar>
   <ion-toolbar>
-    
-    <ion-card color="dark" style="width: 9em; height:2em; margin: 0px; padding:6px; margin: auto;">
-      <ion-card-content style="padding:0px; margin: 0px;">
-        <ion-select value="t1" interface="popover" color="dark" style="width: 8em; height:2em; margin: 0px; margin-top:0px; padding:0px;">
-          <ion-select-option value="t1">Trimestre 1</ion-select-option>
-          <ion-select-option value="t2">Trimestre 2</ion-select-option>
-          <ion-select-option value="t2">Trimestre 3</ion-select-option>
-        </ion-select>
-      </ion-card-content>
-    </ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col offset="4" size="4">
+          <ion-button (click)="selectT()" text-capitalize color="dark">Trimestre {{ t }}</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
    
 
   </ion-toolbar>
@@ -26,4 +24,127 @@
 
 
 <ion-content>
+  <ion-card>
+    <ion-card-header no-padding class="ion-no-margin-bottom">
+      <ion-card button no-padding no-margin button (click)="noteInfo()">
+        <ion-toolbar color="light" padding-start>
+          <ion-title slot="start">Trimestre</ion-title>
+          <ion-text slot="primary" margin-end>
+            <h4>45 lol</h4>
+          </ion-text>
+        </ion-toolbar>
+      </ion-card>
+    </ion-card-header>
+  </ion-card>
+  <ion-card>
+    <ion-card-header no-padding class="ion-no-margin-bottom">
+      <ion-card button no-padding no-margin button (click)="change(0)">
+      <ion-toolbar color="secondary" padding-start>
+        <ion-icon [name]="'arrow-'+d(dropped[0])" size="large" slot="start"></ion-icon>
+        <ion-title slot="start">Anglais</ion-title>
+        <ion-text slot="primary" margin-end><h4>15</h4></ion-text>
+      </ion-toolbar>
+      </ion-card>
+    </ion-card-header>
+    <ion-card-content no-padding no-margin *ngIf="dropped[0]">
+      <ion-card no-margin no-padding button (click)="noteInfo()">
+        <ion-card-header ion-no-margin no-padding>
+          <ion-toolbar>
+            <ion-title slot="start">Le 15 mars</ion-title>
+            <ion-text slot="primary" margin-end><h2>15/20</h2></ion-text>
+          </ion-toolbar>
+        </ion-card-header>
+      </ion-card>
+      <ion-card no-margin no-padding button (click)="noteInfo()">
+        <ion-card-header ion-no-margin no-padding>
+          <ion-toolbar>
+            <ion-title slot="start">Le 15 mars</ion-title>
+            <ion-text slot="primary" margin-end><h2>15/20</h2></ion-text>
+          </ion-toolbar>
+        </ion-card-header>
+      </ion-card>
+      <ion-card no-margin no-padding button (click)="noteInfo()">
+        <ion-card-header ion-no-margin no-padding>
+          <ion-toolbar>
+            <ion-title slot="start">Le 15 mars</ion-title>
+            <ion-text slot="primary" margin-end><h2>15/20</h2></ion-text>
+          </ion-toolbar>
+        </ion-card-header>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header no-padding class="ion-no-margin-bottom">
+      <ion-card button no-padding no-margin button (click)="change(2)">
+      <ion-toolbar color="danger" padding-start>
+        <ion-icon [name]="'arrow-'+d(dropped[2])" size="large" slot="start"></ion-icon>
+        <ion-title slot="start">SVT</ion-title>
+        <ion-text slot="primary" margin-end><h4>15</h4></ion-text>
+      </ion-toolbar>
+      </ion-card>
+    </ion-card-header>
+    <ion-card-content no-padding no-margin *ngIf="dropped[2]">
+      <ion-card no-margin no-padding button (click)="noteInfo()">
+        <ion-card-header ion-no-margin no-padding>
+          <ion-toolbar>
+            <ion-title slot="start">Le 15 mars</ion-title>
+            <ion-text slot="primary" margin-end><h2>15/20</h2></ion-text>
+          </ion-toolbar>
+        </ion-card-header>
+      </ion-card>
+      <ion-card no-margin no-padding button (click)="noteInfo()">
+        <ion-card-header ion-no-margin no-padding>
+          <ion-toolbar>
+            <ion-title slot="start">Le 15 mars</ion-title>
+            <ion-text slot="primary" margin-end><h2>15/20</h2></ion-text>
+          </ion-toolbar>
+        </ion-card-header>
+      </ion-card>
+      <ion-card no-margin no-padding button (click)="noteInfo()">
+        <ion-card-header ion-no-margin no-padding>
+          <ion-toolbar>
+            <ion-title slot="start">Le 15 mars</ion-title>
+            <ion-text slot="primary" margin-end><h2>15/20</h2></ion-text>
+          </ion-toolbar>
+        </ion-card-header>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header no-padding class="ion-no-margin-bottom">
+      <ion-card button no-padding no-margin button (click)="change(1)">
+      <ion-toolbar color="primary" padding-start>
+        <ion-icon [name]="'arrow-'+d(dropped[1])" size="large" slot="start"></ion-icon>
+        <ion-title slot="start">Mathémathiques</ion-title>
+        <ion-text slot="primary" margin-end><h4>15</h4></ion-text>
+      </ion-toolbar>
+      </ion-card>
+    </ion-card-header>
+    <ion-card-content no-padding no-margin *ngIf="dropped[1]">
+      <ion-card no-margin no-padding button (click)="noteInfo()">
+        <ion-card-header ion-no-margin no-padding>
+          <ion-toolbar>
+            <ion-title slot="start">Le 15 mars</ion-title>
+            <ion-text slot="primary" margin-end><h2>15/20</h2></ion-text>
+          </ion-toolbar>
+        </ion-card-header>
+      </ion-card>
+      <ion-card no-margin no-padding button (click)="noteInfo()">
+        <ion-card-header ion-no-margin no-padding>
+          <ion-toolbar>
+            <ion-title slot="start">Le 15 mars</ion-title>
+            <ion-text slot="primary" margin-end><h2>15/20</h2></ion-text>
+          </ion-toolbar>
+        </ion-card-header>
+      </ion-card>
+      <ion-card no-margin no-padding button (click)="noteInfo()">
+        <ion-card-header ion-no-margin no-padding>
+          <ion-toolbar>
+            <ion-title slot="start">Le 15 mars</ion-title>
+            <ion-text slot="primary" margin-end><h2>15/20</h2></ion-text>
+          </ion-toolbar>
+        </ion-card-header>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
