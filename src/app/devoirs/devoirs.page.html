@@ -18,13 +18,50 @@
     </ion-card-header>
     <ion-card-content no-padding no-margin>
       <ion-list no-padding no-margin>
-        <ion-card>
-          <ion-card-header no-padding no-margin>
-            <ion-toolbar padding-end padding-start no-margin color="danger">
-              <ion-card-title no-padding no-margin>Mathématiques</ion-card-title >
-              <ion-checkbox no-padding no-margin slot="end"></ion-checkbox>
-            </ion-toolbar >
+        <ion-card  no-margin>
+          <ion-card-header  no-padding no-margin>
+            <ion-toolbar no-padding no-margin color="success">
+              <ion-toolbar no-padding no-margin margin-start color="light" padding-end>
+                <ion-title no-padding no-margin margin-start>Philolsophie</ion-title>
+                <ion-checkbox no-padding no-margin slot="end" margin-end color="success" [(ngModel)]="m1"></ion-checkbox>
+              </ion-toolbar>
+            </ion-toolbar>
           </ion-card-header>
+          <ion-card-content no-padding no-margin padding-start margin-start *ngIf="!m1">
+            <ion-toolbar no-padding no-margin>
+              <p no-padding no-margin padding-end padding-start margin-start>bonjour à tout le monde mes amis.</p>
+            </ion-toolbar >
+          </ion-card-content>
+        </ion-card>
+        <ion-card no-margin>
+          <ion-card-header no-padding no-margin>
+            <ion-toolbar no-padding no-margin color="danger">
+              <ion-toolbar no-padding no-margin margin-start color="light" padding-end>
+                <ion-title no-padding no-margin margin-start>Mathématiques</ion-title>
+                <ion-checkbox no-padding no-margin slot="end" margin-end color="danger" [(ngModel)]="m2"></ion-checkbox>
+              </ion-toolbar>
+            </ion-toolbar>
+          </ion-card-header>
+          <ion-card-content no-padding no-margin padding-start margin-start *ngIf="!m2">
+            <ion-toolbar no-padding no-margin>
+              <p no-padding no-margin padding-end padding-start margin-start>DM: page1-page254, amuser vou bien coorialement (je ne rammasserai pas)</p>
+            </ion-toolbar>
+          </ion-card-content>
+        </ion-card>
+        <ion-card no-margin>
+          <ion-card-header no-padding no-margin>
+            <ion-toolbar no-padding no-margin color="tertiary">
+              <ion-toolbar no-padding no-margin margin-start color="light" padding-end>
+                <ion-title no-padding no-margin margin-start>Anglais</ion-title>
+                <ion-checkbox no-padding no-margin slot="end" margin-end color="tertiary" [(ngModel)]="m3"></ion-checkbox>
+              </ion-toolbar>
+            </ion-toolbar>
+          </ion-card-header>
+          <ion-card-content no-padding no-margin padding-start margin-start *ngIf="!m3">
+            <ion-toolbar no-padding no-margin>
+              <p no-padding no-margin padding-end padding-start margin-start>Try to use the verbe be.</p>
+            </ion-toolbar>
+          </ion-card-content>
         </ion-card>
       </ion-list>
     </ion-card-content>

@@ -16,6 +16,10 @@ import { PopoverController } from 'ionic-angular';
 
 export class HomePage {
 
+  m1 = false;
+  m2 = false;
+  m3 = false;
+
   constructor(public alertController: AlertController) { }
 
 

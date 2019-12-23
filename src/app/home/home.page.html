@@ -13,28 +13,65 @@
 
 <ion-content color="medium">
   <ion-list>
-  <ion-card button>
+  <ion-card>
     <ion-header>
       <ion-toolbar color="dark" fill="solid">
         <ion-icon name="book" size="large" slot="start" style="padding-left: 10px;"></ion-icon>
         <ion-title>Prochains devoirs</ion-title>
-        <ion-card-subtitle style="padding-left: 1.5em;">(demain)</ion-card-subtitle>
-        <ion-button slot="end" fill="clear" color="light" shape="round" routerLink="/devoirs">
-          <ion-icon name="add-circle" size="large"></ion-icon>
+        <ion-card-subtitle style="padding-left: 1.5em;">Demain</ion-card-subtitle>
+        <ion-button slot="end" fill="clear" color="light" shape="round" routerLink="/devoirs" no-padding margin-end>
+          <ion-icon name="add-circle" size="large" slot="icon-only"></ion-icon>
         </ion-button>
       </ion-toolbar>
     </ion-header>
     <ion-card-content>
-      <ion-list>
-        <ion-item>
-          <ion-label>Label 1</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Label 2</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>Label 3</ion-label>
-        </ion-item>
+      <ion-list no-padding no-margin>
+        <ion-card no-margin>
+          <ion-card-header no-padding no-margin>
+            <ion-toolbar no-padding no-margin color="success">
+              <ion-toolbar no-padding no-margin margin-start color="light" padding-end>
+                <ion-title no-padding no-margin margin-start>Philolsophie</ion-title>
+                <ion-checkbox no-padding no-margin slot="end" margin-end color="success" [(ngModel)]="m1"></ion-checkbox>
+              </ion-toolbar>
+            </ion-toolbar>
+          </ion-card-header>
+          <ion-card-content no-padding no-margin padding-start margin-start *ngIf="!m1">
+            <ion-toolbar no-padding no-margin>
+              <p no-padding no-margin padding-end padding-start margin-start>bonjour à tout le monde mes amis.</p>
+            </ion-toolbar>
+          </ion-card-content>
+        </ion-card>
+        <ion-card no-margin>
+          <ion-card-header no-padding no-margin>
+            <ion-toolbar no-padding no-margin color="danger">
+              <ion-toolbar no-padding no-margin margin-start color="light" padding-end>
+                <ion-title no-padding no-margin margin-start>Mathématiques</ion-title>
+                <ion-checkbox no-padding no-margin slot="end" margin-end color="danger" [(ngModel)]="m2"></ion-checkbox>
+              </ion-toolbar>
+            </ion-toolbar>
+          </ion-card-header>
+          <ion-card-content no-padding no-margin padding-start margin-start *ngIf="!m2">
+            <ion-toolbar no-padding no-margin>
+              <p no-padding no-margin padding-end padding-start margin-start>DM: page1-page254, amuser vou bien coorialement
+                (je ne rammasserai pas)</p>
+            </ion-toolbar>
+          </ion-card-content>
+        </ion-card>
+        <ion-card no-margin>
+          <ion-card-header no-padding no-margin>
+            <ion-toolbar no-padding no-margin color="tertiary">
+              <ion-toolbar no-padding no-margin margin-start color="light" padding-end>
+                <ion-title no-padding no-margin margin-start>Anglais</ion-title>
+                <ion-checkbox no-padding no-margin slot="end" margin-end color="tertiary" [(ngModel)]="m3"></ion-checkbox>
+              </ion-toolbar>
+            </ion-toolbar>
+          </ion-card-header>
+          <ion-card-content no-padding no-margin padding-start margin-start *ngIf="!m3">
+            <ion-toolbar no-padding no-margin>
+              <p no-padding no-margin padding-end padding-start margin-start>Try to use the verbe be.</p>
+            </ion-toolbar>
+          </ion-card-content>
+        </ion-card>
       </ion-list>
     </ion-card-content>
   </ion-card>
@@ -43,7 +80,7 @@
       <ion-toolbar color="dark" fill="solid">
         <ion-icon name="school" size="large" slot="start" style="padding-left: 10px;" button href="/notes"></ion-icon>
         <ion-title>Dernières notes</ion-title>
-        <ion-button slot="end" fill="clear" color="light" shape="round" routerLink="/notes">
+        <ion-button slot="end" fill="clear" color="light" shape="round" routerLink="/notes" no-padding margin-end>
           <ion-icon name="add-circle" size="large"></ion-icon>
         </ion-button>
       </ion-toolbar>
@@ -57,7 +94,7 @@
             <ion-toolbar  color="secondary" style="padding:0px; padding-left:1em; margin-left:0.4em" color="light">
                 <ion-card-title>Mathématiques</ion-card-title>
                 <ion-card-subtitle>Le 10/13/19</ion-card-subtitle>
-            <ion-text style=" padding-right: 1em;" slot="end"><p style="font-size: 2em; display: inline;">14.5</p>/20</ion-text>
+            <ion-text style=" padding-right: 1em;" slot="end"><p style="font-size: 1.5em; display: inline;">14.5</p>/20</ion-text>
             </ion-toolbar>
           </ion-card-header>
         </ion-card>
@@ -66,7 +103,7 @@
             <ion-toolbar  color="secondary" style="padding:0px; padding-left:1em; margin-left:0.4em" color="light">
                 <ion-card-title>Histoire</ion-card-title>
                 <ion-card-subtitle>Le 10/13/19</ion-card-subtitle>
-            <ion-text style=" padding-right: 1em;" slot="end"><p style="font-size: 2em; display: inline;">-5i</p>/10</ion-text>
+            <ion-text style=" padding-right: 1em;" slot="end"><p style="font-size: 1.5em; display: inline;">-5i</p>/10</ion-text>
             </ion-toolbar>
           </ion-card-header>
         </ion-card>
@@ -75,7 +112,7 @@
             <ion-toolbar  color="secondary" style="padding:0px; padding-left:1em; margin-left:0.4em" color="light">
                 <ion-card-title>Anglais</ion-card-title>
                 <ion-card-subtitle>Le 10/13/19</ion-card-subtitle>
-            <ion-text style=" padding-right: 1em;" slot="end"><p style="font-size: 2em; display: inline;">17</p>/20</ion-text>
+            <ion-text style=" padding-right: 1em;" slot="end"><p style="font-size: 1.5em; display: inline;">17</p>/20</ion-text>
             </ion-toolbar>
           </ion-card-header>
         </ion-card>
@@ -89,7 +126,7 @@
       <ion-toolbar color="dark" fill="solid">
         <ion-icon name="calendar" size="large" slot="start" style="padding-left: 10px;"></ion-icon>
         <ion-title>Prochains cours</ion-title>
-        <ion-button slot="end" fill="clear" color="light" shape="round" routerLink="/agenda">
+        <ion-button slot="end" fill="clear" color="light" shape="round" routerLink="/agenda" no-padding margin-end>
           <ion-icon name="add-circle" size="large"></ion-icon>
         </ion-button>
       </ion-toolbar>

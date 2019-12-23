@@ -9,4 +9,7 @@ import { Component } from '@angular/core';
 })
 
 export class DevoirsPage {
+  m1 = false;
+  m2 = false;
+  m3 = false;
 }
